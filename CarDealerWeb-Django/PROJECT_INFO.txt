@@ -1,0 +1,2 @@
+Hey, You need to install the requirments.txt,
+and name the PostgreSQL DB "cardealer_db".
