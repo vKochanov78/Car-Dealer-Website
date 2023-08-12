@@ -16,7 +16,6 @@ import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -30,7 +29,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1']
 
 LOGIN_REDIRECT_URL = 'dashboard'
-
 
 # Application definition
 
@@ -88,20 +86,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'cardealer.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-     'default': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'cardealer_db',
-        'USER': 'postgres', 
-        'PASSWORD': '0000', 
+        'USER': 'postgres-user',
+        'PASSWORD': 'password',
         'HOST': '127.0.0.1',
-		'PORT': '5432',
-     }
- }
+        'PORT': '5432',
+    }
+}
 
 # DATABASES = {'default': dj_database_url.config(default='postgres://postgres:######@localhost/cardealer_db')}
 
@@ -124,7 +121,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -137,7 +133,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -154,12 +149,12 @@ MEDIA_URL = '/media/'
 
 # Messages
 from django.contrib.messages import constants as messages
+
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
 SITE_ID = 1
-
 
 # Email sending
 # EMAIL_HOST = 'smtp.gmail.com'
